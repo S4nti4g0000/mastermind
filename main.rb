@@ -3,3 +3,5 @@ require_relative 'lib/player'
 
 codemaker = CodeMaker.new
 player = Player.new
+
+codemaker.create_code
