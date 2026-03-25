@@ -1,5 +1,7 @@
 
 class CodeMaker 
+
+  attr_reader :code
   
   def initialize()
     @colors = ['purple','red','white','black','yellow','blue','green','brown','pink','orange']
@@ -7,11 +9,11 @@ class CodeMaker
   end
 
   def create_code
-    4.times do
-      @code.push(@colors[rand(0..10)])
-    end
+    @code.clear if !@code.empty?
 
-    @code
+    4.times do
+      @code.push(@colors[rand(0..9)])
+    end
   end
 
 end
