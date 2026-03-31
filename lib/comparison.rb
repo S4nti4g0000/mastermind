@@ -8,8 +8,10 @@ module Comparison
 
     player.each.with_index do |color, i|
       if computer.any?(color)
-        puts "You guessed the color and the position" if computer.index(color) == i
-        puts "You guessed the color but not the position" if computer.index(color) != i
+        puts "You guessed the color #{color} and its position" if computer.index(color) == i
+        puts "You guessed the color #{color} but not its position" if computer.index(color) != i
+      else
+        puts "#{color.to_s.capitalize} is incorrect"
       end      
     end
   
