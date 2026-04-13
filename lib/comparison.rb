@@ -1,10 +1,6 @@
 module Comparison
   
   def compare_choices (player = [], computer = [])
-    
-    if player == computer
-      return "same" 
-    end   
 
     player.each.with_index do |color, i|
       if computer.any?(color)
@@ -14,9 +10,17 @@ module Comparison
         puts "#{color.to_s.capitalize} is incorrect"
       end      
     end
-  
+
   end
 
-  module_function :compare_choices
+  def winner (player = [], computer = [])
+    if player == computer
+      return true
+    else
+      return false
+    end
+  end
+
+  module_function :compare_choices, :winner
 
 end
